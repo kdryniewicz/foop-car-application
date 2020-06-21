@@ -1,0 +1,43 @@
+﻿<Window x:Class="CA1_s00160273.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CA1_s00160273"
+        mc:Ignorable="d"
+        Title="Car Application" Height="480" Width="600" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300*"/>
+            <ColumnDefinition Width="300*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="85*"/>
+            <RowDefinition Height="55*"/>
+            <RowDefinition Height="244*"/>
+            <RowDefinition Height="65*"/>
+        </Grid.RowDefinitions>
+        <RadioButton x:Name="radAll" Content="All" Grid.Column="0" HorizontalAlignment="Left" Margin="70,30,0,0" VerticalAlignment="Top" Height="15" Width="40" Checked="radAll_Checked"/>
+        <RadioButton x:Name="radCars" Content="Cars" Grid.Column="0" HorizontalAlignment="Left" Margin="190,30,0,0" VerticalAlignment="Top" Height="15" Width="50" Checked="radCars_Checked"/>
+        <RadioButton x:Name="radBikes" Content="Bikes" Grid.Column="1" HorizontalAlignment="Left" Margin="50,30,0,0" VerticalAlignment="Top" Height="15" Width="50" Checked="radBikes_Checked"/>
+        <RadioButton x:Name="radVans" Content="Vans" Grid.Column="1" HorizontalAlignment="Left" Margin="190,30,0,0" VerticalAlignment="Top" Height="15" Width="50" Checked="radVans_Checked"/>
+        <ListBox x:Name="lbxCars" HorizontalAlignment="Left" Height="200" Margin="25,20,0,0"  VerticalAlignment="Top" Width="250" Grid.ColumnSpan="2" Grid.Row="2" SelectionChanged="lbxCars_SelectionChanged">
+             
+        </ListBox>
+        <Label x:Name="lbSortBy" Content="Sort By:" HorizontalAlignment="Left" Margin="15,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="50" Height="26"/>
+        <ComboBox x:Name="cmbSortBy" Grid.ColumnSpan="1" HorizontalAlignment="Left" Margin="70,13,0,0" Grid.Row="1" VerticalAlignment="Top" Width="120" Height="22" SelectionChanged="cmbSortBy_SelectionChanged"/>
+        <Button x:Name="btnLoad" Content="Load" HorizontalAlignment="Left" Margin="30,26,0,0"  VerticalAlignment="Top" Width="75" Grid.Row="3" Grid.Column="0" Click="btnLoad_Click"/>
+        <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Left" Margin="130,26,0,0"  VerticalAlignment="Top" Width="75" Grid.Row="3" Grid.Column="0" Click="btnSave_Click"/>
+        <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" Margin="250,26,0,0"  VerticalAlignment="Top" Width="75" Grid.ColumnSpan="2" Grid.Row="3" Click="btnAdd_Click"/>
+        <Button x:Name="btnEdit" Content="Edit" HorizontalAlignment="Left" Margin="70,26,0,0" VerticalAlignment="Top" Width="75" Grid.Row="3" Grid.Column="1" Click="btnEdit_Click"/>
+        <Button x:Name="btnDelete" Content="Delete" HorizontalAlignment="Left" Margin="180,26,0,0" VerticalAlignment="Top" Width="75" Grid.Row="3" Grid.Column="1" Click="btnDelete_Click"/>
+        <Label x:Name="lbVehicleDetails" Content="Vehicle Details" Grid.Column="1" HorizontalAlignment="Center" Margin="80,8,56,0" Grid.Row="1" VerticalAlignment="Top" Width="160" Height="35" FontSize="20" FontWeight="ExtraBlack"/>
+        <Image x:Name="imgCar" HorizontalAlignment="Center" Height="70" Margin="280,10,132,0" Grid.Row="2" VerticalAlignment="Top" Width="180" Grid.ColumnSpan="2" RenderTransformOrigin="0.522,0.6"/>
+        <TextBox x:Name="txCarDetails" Grid.Column="1" HorizontalAlignment="Left" Height="146" Margin="70,85,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="185" IsReadOnly="True"/>
+        <Image x:Name="img_all" Grid.Column="0" HorizontalAlignment="Left" Height="45" Margin="20,15,0,0" VerticalAlignment="Top" Width="45"/>
+        <Image x:Name="img_cars" Grid.Column="0" HorizontalAlignment="Left" Height="45" Margin="140,15,0,0" VerticalAlignment="Top" Width="45"/>
+        <Image x:Name="img_bikes" Grid.Column="1" HorizontalAlignment="Left" Height="45" Margin="0,15,0,0" VerticalAlignment="Top" Width="45"/>
+        <Image x:Name="img_vans" Grid.Column="1" HorizontalAlignment="Left" Height="45" Margin="140,15,0,0" VerticalAlignment="Top" Width="45"/>
+
+    </Grid>
+</Window>
